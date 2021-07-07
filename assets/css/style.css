@@ -1,0 +1,153 @@
+/* 1 rem = 16px and 1 em = 16px */
+/* While em is relative to the font-size of its direct or nearest parent, rem is only relative to the html (root) font-size */
+/* the '*' selector selects all the elements */
+*,
+/* 	Insert something before the content of each element */
+*::before,
+/* 	Insert something after the content of each element*/
+/* box-sizing changes how the padding works, within a width instead of total width. */
+/* this will not do anything because the reset.css already includes a box-sizing:border-box */
+*::after {
+    box-sizing: border-box;
+}
+
+/* :root can be useful for declaring global CSS variables. The :root CSS pseudo-class matches the root element of a tree representing the document. In HTML, :root represents the <html> element and is identical to the selector html, except that its specificity is higher. */
+:root {
+    /* ff stands for font family */
+    --ff-primary:'Source Serif Pro', serif;
+    --ff-secondary:'Source Sans Pro', sans-serif;
+    /* fw stands for font weight */
+    --fw-reg: 300;
+    --fw-bold: 900;
+    /* color */
+    --clr-white: #fff;
+    --clr-dark: #303030;
+    --clr-accent: #16e0bd;
+    /* font size */
+    --fs-h1: 3rem;
+    --fs-h2: 2.25rem;
+    --fs-h3: 1.25rem;
+    --fs-body: 1rem;
+}
+
+@media (min-width: 800px) {
+    :root {
+    --fs-h1: 4.5rem;
+    --fs-h2: 3.75rem;
+    --fs-h3: 1.5rem;
+    --fs-body: 1.12rem;
+    }
+    /* in this media querry we made font size variables for the "h tags" and the body tag  */
+    /* Q: how does the role of the root tag play in this file, being local? */
+}
+
+body {
+    background-color: var(--clr-light);
+    color: var(--clr-dark);
+    margin: 0;
+    font-family: var(--ff-primary);
+    font-size: var(--ff-body);
+    line-height: 1.6;
+}
+
+section {
+    padding: 5em 2em;
+/* here we want the sections to have a padding of 5em top&bottom while 2em left&right */
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+strong { font-weight: var(--fw-bold) }
+/* makes the intro title "Omri Ronen" part bold */
+
+
+/* Typography (the style and appearance of printed matter) */
+
+h1, 
+h2, 
+h3 {
+
+    line-height: 1;
+    margin: 0;
+}
+
+h1 { font-size:var(--fs-h1) }
+h2 { font-size:var(--fs-h2) }
+h3 { font-size:var(--fs-h3) }
+
+.section__title {
+    margin-bottom: .25em;
+}
+
+.section__title--intro {
+    font-weight: var(--fw-reg);
+}
+
+/* this will make the <strong> section "Omri Ronen" of the intro title become block, and therefore be on its own line. */
+.section__title--intro strong {
+    display: block;
+}
+
+.section__subtitle {
+    margin:0;
+    font-size: var(--fs-h3)
+}
+
+.section__subtitle--intro,
+.section__subtitle--about {
+    background: var(--clr-accent);
+    padding: .25em 1em;
+    font-family: var(--ff-secondary);
+    margin-bottom: .5em;
+}
+
+/* Intro section */
+/* for now we are hiding the nav until we change it up later */
+nav { display: none }
+
+.intro {
+    position: relative;
+}
+
+@media (min-width: 600px) {
+    .intro {
+        display: grid;
+        width: min-content;
+        margin: 0 auto;
+        grid-column-gap: 1em;
+        grid-template-areas: 
+        "img title"
+        "img subtitle";
+        grid-template-columns: min-content max-content;
+    }
+/* The grid property is meant for the parent container, in my case the .intro (section (container))Defines the element as a grid container and establishes a new grid formatting context for its contents.
+display: grid – generates a block-leve grid
+display: inline-grid – generates an inline-level grid */
+/* width: min-content - means that the section will match the content that's inside of it */
+/* margin: 0 auto - this will keep the content nice and centered when we are at bigger screen sizes */
+/* minute 47:00 on youtube video for this media querry if need more explanation */
+    .intro__img {
+        grid-area: img;
+        min-width: 250px
+    }
+
+    .section__subtitle--intro {
+        align-self: start;
+        /* stop from stretching down and fit into the area nicer */
+        grid-column: -1 / 1;
+        /* this will have it stretch the whole length and go all the way across */
+        grid-row: 2;
+        /* makes the conent so it doesnt overlap */
+        text-align: right;
+        position: relative;
+        left: -1.5em;
+        width: calc(100% + 1.5em);
+        /* width: calc (100% + 1.5em) makes the width match perfectly to the title. This is because we had a left of
+         -1.5 to make the subtitle go out of the picture, so we add a 1.5 here.*/
+    }
+    /* Minute 51:00 on youtube video for this .section__subtitle--intro if need more explanation*/
+
+
+}
