@@ -1,149 +1,312 @@
-<!DOCTYPE html>
-<html lang="en-us">
+<html lang="en">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, internal-scale=1.0">
-        <title>Omri Ronen's Portfolio</title>
-        <link rel="stylesheet" href="./reset.css">
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap" rel="stylesheet">
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@1,300&family=Source+Serif+Pro&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="./style.css">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible"
+        content="IE=edge">
+    <title>Omri Ronen</title>
+    <!-- Compiled and minified CSS -->
 
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- Compiled and minified JavaScript -->
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+    <link
+        href="https://fonts.googleapis.com/icon?family=Material+Icons"
+        rel="stylesheet">
+    <link rel="preconnect"
+        href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect"
+        href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Sacramento&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+</head>
 
-    </head>
-    <body>
-        <header>
-            <div class="logo">
+<body>
+    <!-- nav desktop -->
+    <nav class="nav-wrapper">
+        <div class="container">
+            <a href="#"
+                class="brand-logo right">Omri
+                Ronen</a>
+            <a href="#" class="sidenav-trigger"
+                data-target="mobile-links">
+                <i class="material-icons">menu</i>
+            </a>
+            <ul
+                class=" left hide-on-med-and-down">
                 <img src="" alt="">
+                <li><a class="middle"
+                        href="#contact">Contact</a>
+                </li>
+                <li><a class="middle"
+                        href="#aboutme">About
+                        Me</a></li>
+                <li><a class="middle"
+                        href="#mywork">My
+                        Work</a></li>
+                <li><a class="middle"
+                    href="https://github.com/Omrironen4" target="_blank">GitHub</a>
+                </li>
+                <li><a class="middle"
+                    href="https://www.linkedin.com/in/omri-ronen-a72766206/" target="_blank">LinkedIn</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- nav mobile -->
+    <ul class="sidenav hover" id="mobile-links">
+        <img src="" alt="">
+        <li><a class="middle"
+                href="#contact">Contact me</a>
+        </li>
+        <li><a href="#aboutme">About Me</a></li>
+        <li><a href="#mywork">My Work</a></li>
+        <li><a href="https://github.com/Omrironen4" target="_blank">GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/omri-ronen-a72766206/" target="_blank">LinkedIn</a></li>
+    </ul>
+
+    <!-- main -->
+    <main>
+        <div>
+            <div class="intro-image">
+                <img class="responsive-img"
+                    src="./kauai-pic.jpg">
             </div>
-            <button class="nav-toggle" aria-label="toggle navigation">
-                <span class="hamburger"></span>
-            </button>
-            <nav class="nav">
-                <!-- BEM stands for Block, Element, and Modifier. It's a CSS naming convention for writing cleaner and more readable CSS classes. BEM also aims to write independent CSS blocks in order to reuse them later in your project. (double underscore is part of BEM system) -->
-                <ul class="nav__">
-                    <li class="nav__item"><a href="home" class="nav__link">Home</a>Home</li>
-                    <li class="nav__item"><a href="services" class="nav__link">Services</a>Services</li>
-                    <li class="nav__item"><a href="about" class="nav__link">About Me</a>About me</li>
-                    <li class="nav__item"><a href="work" class="nav__link">Work</a>My Work</li>
+            <h5 class="brand-logo welcome">Welcome
+                to my portfolio</h5>
+        </div>
+        <!-- 1st row -->
+        <div class="row">
+            <div class="center col s12 m12 l12">
+                <p class="title" id="contact">
+                    Contact me</p>
+            </div>
+        </div>
+        <!-- 2nd row -->
+        <div class="row">
+            <div class="center col s12 m12 l12">
+                <ul class="contact-info">
+                    <li>Name: Omri Ronen</li>
+                    <li>Email: <a
+                            class="email-color"
+                            href="mailto:omri.ronen4@gmail.com">
+                            omri.ronen4@gmail.com</a>
+                    </li>
+                    <li>Phone: (949)-910-7806</li>
                 </ul>
-            </nav>
-            </button>
-        </header>
-
-
-        <!-- Introduction -->
-
-        <section class="intro" id="home">
-            <!-- BEM standard double hyphen means it's a modifier class, so it's gonna modify the section title to be a little different from the original section title. We will be making some changes to this title so we add a modifier class. -->
-            <h1 class="section__title section__title--intro">
-                Hi, I am <strong>Omri Ronen</strong>
-            </h1>
-            <p class="section__subtitle section__subtitle--intro">Full-stack web developer</p>
-            <img src="./IMG_3035.JPG" alt="A picture of Omri Ronen smiling" class="intro__img">
-        </section>
-
-
-        <!-- My services -->
-
-        <section class="my-services" id="services">
-            <h2 class="section__title section__title--services">What I do</h2>
-         <div class="services"></div>
-            <!--service -->
-            <div class="service">
-                <h3>Web Design</h3>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur nobis alias debitis aperiam! Cum dolores repellat fugiat error asperiores dicta voluptatibus quaerat, unde ea beatae. Animi tempora voluptate harum sunt?</p>
-            </div> 
-            <!-- /service -->
-            <!--service -->
-            <div class="service">
-                <h3>E-commerce</h3>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda distinctio necessitatibus nihil sit quo, aliquid libero voluptatibus impedit fuga eius labore eos obcaecati natus iure autem dolores illum! Odio, aperiam.</p>
-            </div> 
-            <!-- /service -->
-            <!--service -->
-            <div class="service">
-                <h3>ReactJS</h3>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi maiores, vel tenetur aliquid, ab voluptate magnam facilis quae ipsa repellendus accusamus natus ipsam numquam eaque explicabo dolorum nesciunt, beatae qui.</p>
-            </div> 
-            <!-- /service -->
-        </div>
-        <a href="#work"class="btn">My Work</a>
-        </section>
-
-        <!-- About Me  -->
-        <section class="about-me" id="about">
-            <h2 class="section__title section__title--about">Who I am</h2>
-            <p class="section__subtitle section__subtitle--about"></p>
-        
-            <div class="about-me__body">
-                <p></p>
-                <p></p>
             </div>
-            <img src="./IMG_3035.JPG" alt="Omri smiling again">
-        </section>
-
-    <!-- My Work -->
-    <section class="my-work" id="work">
-        <h2 class="my-work__title">My Work</h2>
-        <p class="section__subtitle"></p>
-
-        <div class="portfolio">
-            <!-- portfolio item 1 -->
-            <a href="" class="portfolio__item">
-                <img src="./IMG_3035.JPG" alt="" class="portfolio__img">
-            </a>
-            <!-- portfolio item 2 -->
-            <a href="" class="portfolio__item">
-                <img src="./IMG_3035.JPG" alt="" class="portfolio__img">
-            </a>
-            <!-- portfolio item 3 -->
-            <a href="" class="portfolio__item">
-                <img src="./IMG_3035.JPG" alt="" class="portfolio__img">
-            </a>
-            <!-- portfolio item 4 -->
-            <a href="" class="portfolio__item">
-                <img src="./IMG_3035.JPG" alt="" class="portfolio__img">
-            </a>
-            <!-- portfolio item 5 -->
-            <a href="" class="portfolio__item">
-                <img src="./IMG_3035.JPG" alt="" class="portfolio__img">
-            </a>
-            <!-- portfolio item 6 -->
-            <a href="" class="portfolio__item">
-                <img src="./IMG_3035.JPG" alt="" class="portfolio__img">
-            </a>
-            <!-- portfolio item 7 -->
-            <a href="" class="portfolio__item">
-                <img src="./IMG_3035.JPG" alt="" class="portfolio__img">
-            </a>
-            <!-- portfolio item 8 -->
-            <a href="" class="portfolio__item">
-                <img src="./IMG_3035.JPG" alt="" class="portfolio__img">
-            </a>
-            <!-- portfolio item 9 -->
-            <a href="" class="portfolio__item">
-                <img src="./IMG_3035.JPG" alt="" class="portfolio__img">
-            </a>
-            <!-- portfolio item 0 0 -->
-            <a href="" class="portfolio__item">
-                <img src="./IMG_3035.JPG" alt="" class="portfolio__img">
-            </a>
         </div>
-    </section>
+        <!-- 3rd row -->
+        <div class="row">
+            <div class="center col s12 m12 l12">
+                <p class="title" id="aboutme">
+                    About me</p>
+            </div>
+        </div>
+        <!-- 4th row -->
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <p class="about-me-par"> Hello, my
+                    name is Omri! I am a full
+                    stack web devleoper with a
+                    deep a passion for science,
+                    and a deep connection with
+                    nature. I strive to do my
+                    best, to continuosly learn,
+                    and to build myself as a
+                    better person.
+                </p>
+            </div>
+        </div>
+        <!-- 5th row -->
+        <div class="row">
+            <div class="center col s12 m12 l12">
+                <p class="title" id="mywork">My
+                    work</p>
+            </div>
+        </div>
+        <!-- 6th row -->
+        <div class="row">
+            <div class="col s12 m6 l6">
+                <i class="material-icons">filter_list</i>
+                <p class="project-title">Make it |
+                    Buy it</p>
+            </div>
+        </div>
+        <!-- row -->
+        <div class="row">
+            <div class="col s6 m6 l6">
+                <a href="https://omrironen4.github.io/project-1/" target="_blank">Link to application</a>
+            </div>
+        </div>
+        <!-- 7th row -->
+        <div class="row">
+            <div class="col s12 m8 l8">
+                <p class="project-des">An
+                    application that helps users
+                    choose between making food or
+                    buying food.</p>
+            </div>
+        </div>
 
-    <footer>
-        <a href="mailto:omri.ronen4@gmail.com" class="footer__link">omri.ronen4@gmail.com</a>
-        <ul class="social-list">
-            <li class="social-list__item"><a href="https://www.google.com"class="social-list__link">a</a></li>
-            <li class="social-list__item"><a href="https://www.google.com"class="social-list__link">b</a></li>
-            <li class="social-list__item"><a href="https://www.google.com"class="social-list__link">c</a></li>
-            <li class="social-list__item"><a href="https://www.google.com"class="social-list__link">d</a></li>
-        </ul>
+
+
+
+        <!-- 8th row make it & buy it card -->
+        <div class="row">
+            <div class="card small col s5 m4 l4">
+                <div
+                    class="card-image waves-effect waves-block waves-light">
+                    <img class="activator"
+                        src="./makeit.png">
+                </div>
+                <div class="card-content">
+                    <span
+                        class="card-title activator grey-text text-darken-4">Make
+                        it page<i
+                            class="material-icons right">more_vert</i></span>
+                    <p><i class="material-icons"><a
+                                href="#https://iamalittleforest.github.io/project-1/makeit.html"></a>link</i>
+                    </p>
+                </div>
+                <div class="card-reveal">
+                    <span
+                        class="card-title grey-text text-darken-4"><i
+                            class="material-icons right">close</i></span>
+                    <p class="info">Enter your
+                        ingredients separated by a
+                        comma, and find some
+                        amazing recipes!</p>
+                </div>
+            </div>
+
+            <div class="card small col s5 m4 l4">
+                <div
+                    class="card-image waves-effect waves-block waves-light">
+                    <img class="activator"
+                        src="./buyit.png">
+                </div>
+                <div class="card-content">
+                    <span
+                        class="card-title activator grey-text text-darken-4">Buy
+                        it page<i
+                            class="material-icons right">more_vert</i></span>
+                    <p><i class="material-icons"><a
+                                class="link"
+                                href="https://iamalittleforest.github.io/project-1/buyit.html"></a>link</i>
+                    </p>
+                </div>
+                <div class="card-reveal">
+                    <span
+                        class="card-title grey-text text-darken-4"><i
+                            class="material-icons right">close</i></span>
+                    <p class="info">Search for
+                        restaurants near you by
+                        typing in your city!</p>
+                </div>
+            </div>
+        </div>
+
+       
+
+        <!-- 9th row -->
+        <div class="row">
+            <div class="col s12 m6 l6">
+                <i class="material-icons">filter_list</i>
+                <p class="project-title">Weather
+                    Application</p>
+            </div>
+        </div>
+        <!-- row -->
+        <div class="row">
+            <div class="col s6 m6 l6">
+                <a href="https://omrironen4.github.io/weather-dashboard-homework-6/" target="_blank">Link to application</a>
+            </div>
+        </div>
+        <!-- 10th row -->
+        <div class="row">
+            <div class="col s12 m8 l8">
+                <p class="project-des">Weather
+                    dashboard is an application
+                    that allows users to check the
+                    current weather in cities
+                    around the world.</p>
+            </div>
+        </div>
+        <!-- 11th row -->
+        <div class="row">
+            <div class="card small col s8 m8 l8">
+                <div
+                    class="card-image waves-effect waves-block waves-light">
+                    <img class="activator"
+                        src="./weatherapp.png">
+                </div>
+                <div class="card-content">
+                    <span
+                        class="card-title activator grey-text text-darken-4"><i
+                            class="material-icons right">more_vert</i>
+                    </span>
+                    <p>
+                        <i class="material-icons"><a
+                                class="link"
+                                href="https://omrironen4.github.io/weather-dashboard-homework-6/"></a>link</i>
+                    </p>
+                </div>
+                <div class="card-reveal">
+                    <span
+                        class="card-title grey-text text-darken-4"><i
+                            class="material-icons right">close</i></span>
+                    <p class="info">In this
+                        application, users can
+                        check the weather based on
+                        location by city - see the
+                        5 day forcast in your
+                        city!</p>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer id="footinfo" class="page-footer">
+        <div class="container">
+            <div class="row">
+
+                <div class="col l4 offset-l2 s12">
+                    <!-- <h5 class="white-text">Links
+                    </h5> -->
+                    <ul class="left">
+                        <li><a class="grey-text text-lighten-3"
+                                href="https://github.com/Omrironen4" target="_blank">GitHub</a>
+                        </li>
+                        <li><a class="grey-text text-lighten-3"
+                                href="https://www.linkedin.com/in/omri-ronen-a72766206/" target="_blank">LinkedIn
+                            </a></li>
+                        <li><a class="grey-text text-lighten-3"
+                                href="https://docs.google.com/document/d/e/2PACX-1vS5dGq3v01sdLkhIS5UtbLdtaL8CrL43SST5qL_-WY-pRBBRdCeIujKkcsGFVRXr2gBv6vrwJAgn75E/pub?embedded=true" download target="_blank">Resume
+                            </a></li>
+
+
+                    </ul>
+                </div>
+            </div>
+        </div>
     </footer>
 
-    </body>
+
+    <script
+        src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="./script.js"></script>
+</body>
+
 </html>
